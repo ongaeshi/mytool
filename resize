@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+require 'rake'
+
+size = ARGV.shift
+
+ARGV.each do |path|
+  dst_dir = "#{File.dirname(path)}/thums"
+  FileUtils.mkdir dst_dir unless File.exist? dst_dir
+
+  dst = "#{dst_dir}/#{File.basename(path)}"
+  
+  sh "convert -resize #{size} #{path} #{dst}"
+end
+
+
