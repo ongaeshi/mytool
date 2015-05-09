@@ -1,4 +1,9 @@
 #!/usr/bin/env ruby
+# Resize images  using the ImageMagick
+#
+#   $ resize 50% a.png b.png
+#   convert -resize 50% a.png ./thums/a.png
+#   convert -resize 50% b.png ./thums/b.png
 
 require 'fileutils'
 require 'rake'
