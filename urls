@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 
-$stdin.each_line do |line|
-  urls = line.scan(%r{https?://\S+})
+require 'uri'
+
+ARGF.each_line do |line|
+  urls = URI.extract(line, %w(http https))
   urls.each do |url|
     puts url
   end
