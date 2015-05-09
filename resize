@@ -12,7 +12,7 @@ size = ARGV.shift
 
 ARGV.each do |path|
   dst_dir = "#{File.dirname(path)}/thums"
-  FileUtils.mkdir dst_dir unless File.exist? dst_dir
+  FileUtils.mkdir_p dst_dir
 
   dst = "#{dst_dir}/#{File.basename(path)}"
   
