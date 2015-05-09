@@ -1,0 +1,8 @@
+# Send mail
+/opt/local/bin/qiita_mail deliver >> /Users/ongaeshi/tmp/qiita_mail.log
+
+# Wait send mail
+sleep 60
+
+# Sleep
+osascript -e 'tell app "Finder" to sleep'

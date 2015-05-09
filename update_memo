@@ -1,0 +1,15 @@
+PATH=/opt/local/bin:/opt/local/sbin:/opt/local/bin:/usr/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+date +'[%Y-%m-%d %H:%M:%S]'
+
+# export-memo
+cd /Users/ongaeshi/Documents/export-memo/ && ruby export-memo.rb
+milk update export-memo
+
+# tweets
+milk update tweets
+
+# Day One
+milk update 'Day One'
+
+
